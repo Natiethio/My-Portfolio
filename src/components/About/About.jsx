@@ -1,53 +1,39 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./About.css";
-import AboutData from "./About.json"
-import { fadeIn } from '../variants'
-import { motion, useAnimation, useScroll, useTransform } from 'framer-motion';
-import { useInView } from "react-intersection-observer";
-import { themeContext } from "../../Context"
+import AboutData from "./About.json";
+import { motion } from "framer-motion";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import { themeContext } from "../../Context";
 
 const About = () => {
-
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
-
+  const value = 0.66;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const transition = { duration: 2, type: "spring" };
-  const control = useAnimation();
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % AboutData.images.length);
-    }, 7000); // 7 seconds
+    }, 4000); // 7 seconds
     return () => clearInterval(interval);
-
   }, []);
-
-  useEffect(() => {
-    if (inView) {
-        control.start("visible");
-    } else {
-        control.start("hidden");
-    }
-}, [control, inView]);
-
 
   return (
     <motion.div
-      ref={ref}
       id="about"
       className="about-section"
-      initial={{ opacity: 0, y: 50 }} 
-      whileInView={{ opacity: 1, y: 0 }} 
-      transition={transition}
-      viewport={{ once: true, amount: 0.2 }}
-      >
-
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.8, type: "spring" }}
+    >
       <div className="about-content">
+        {/* About Section Grid */}
         <div className="about-grid">
+          {/* Rotating Image Section */}
           <div className="about-image">
-          {AboutData.images.map((image, index) => (
+            {AboutData.images.map((image, index) => (
               <motion.img
                 key={image.id}
                 src={image.image}
@@ -59,45 +45,75 @@ const About = () => {
               />
             ))}
           </div>
+          {/* Text Section */}
           <div className="about-text">
             <h2 style={{ color: darkMode ? "white" : "" }}>About Me</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              vel sem vel nisi bibendum fermentum. Curabitur tincidunt at lacus
-              eget efficitur. Proin quis tellus id turpis tincidunt egestas at
-              a nisi.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel sem vel nisi
+              bibendum fermentum. Curabitur tincidunt at lacus eget efficitur. Proin quis tellus id
+              turpis tincidunt egestas at a nisi.
             </p>
+
           </div>
-          {/* <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div> */}
         </div>
 
         {/* Skills Section */}
         <div className="skills-grid">
-          {AboutData.skills.map((skill, index) => (
-            <div className="skill" key={index}>
-              <div className="circle">
-                <svg>
-                  <circle cx="50" cy="50" r="45"></circle>
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="45"
-                    style={{
-                      strokeDasharray: `${2 * Math.PI * 45}`,
-                      strokeDashoffset: `${2 * Math.PI * 45 * (1 - skill.percentage / 100)
-                        }`,
-                    }}
-                  ></circle>
-                </svg>
-                <div className="percentage">{skill.percentage}%</div>
-              </div>
-              <p>{skill.name}</p>
-            </div>
-          ))}
+          {AboutData.skills.map((skill, index) => {
+            const [percentage, setPercentage] = useState(0);
+
+            useEffect(() => {
+              // Counting effect for percentage
+              const interval = setInterval(() => {
+                setPercentage((prev) => {
+                  if (prev < skill.percentage) return prev + 1;
+                  clearInterval(interval);
+                  return skill.percentage;
+                });
+              }, 10);
+              return () => clearInterval(interval);
+            }, [skill.percentage]);
+
+            return (
+              <motion.div
+                className="skill"
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.8, type: "spring" }}
+              >
+                {/* Circular Progress Bar */}
+                <div className="circle">
+                  <CircularProgressbar
+                    counterClockwise={false}
+                    value={percentage}
+                    
+                    text={` ${percentage}%`}
+                    styles={buildStyles({
+                      rotation: 0.25,
+                      pathColor: "#5eb939",
+                      textColor: "#5eb939",
+                      trailColor: "#e0e0e0",
+                      textSize: "25px",
+                      pathTransitionDuration: 1.5,
+                      strokeLinecap: "butt",
+                      textStyle: {
+                        transform: "rotate(0deg)",
+                      },
+                    })}
+                  />
+                </div>
+
+                <p>{skill.name}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
+

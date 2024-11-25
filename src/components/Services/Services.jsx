@@ -11,7 +11,6 @@ import Humble from "/Images/humble.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import Resume from './Natnael_Berhanu_Resume.pdf';
-import "../Card/Card.css";
 import Graphics from "/Images/Services/Graphics_Design.png"
 import Illustrator from "/Images/Services/illustratoricon.png"
 import PhotoShop from "/Images/Services/PhotoShopicon.png"

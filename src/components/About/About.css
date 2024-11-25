@@ -111,6 +111,31 @@ circle:last-child {
   transition: stroke-dashoffset 0.5s ease;
 }
 
+.circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+svg {
+  transform: rotate(-90deg); /* Progress starts at the top */
+}
+
+circle {
+  fill: none;
+  stroke-width: 10;
+}
+
+circle:first-child {
+  stroke: #e0e0e0; /* Background circle */
+}
+
+circle:last-child {
+  stroke: #5eb939; /* Progress bar color */
+  stroke-linecap: round;
+  stroke-dashoffset: 0;
+}
+
 .percentage {
   position: absolute;
   top: 50%;
@@ -121,11 +146,19 @@ circle:last-child {
   color: #5eb939;
 }
 
+/* CSS for fixing the text rotation */
+.css-0 .CircularProgressbar-text {
+  transform: rotate(-90deg); /* Rotate text upright */
+  dominant-baseline: middle; /* Vertical centering */
+  text-anchor: middle; /* Horizontal centering */
+}
+
+
 @media (max-width: 1024px) {
 
     .about-section  {
       padding-left: 50px;
-      margin-top: -550px;
+      /* margin-top: -550px; */
     }
 }
 
