@@ -1,0 +1,115 @@
+.services {
+  padding: 45rem 0.9rem;
+  display: flex;
+  height: 30rem;
+  margin-bottom: 8rem;
+  top: 9rem;
+  margin-bottom: 13rem;
+  padding-top: 3.5rem;
+  padding-left: 90px;
+}
+
+
+/* left side */
+.awesome {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.awesome > :nth-child(1) {
+  color: var(--black);
+  font-size: 3rem;
+  font-weight: bold;
+}
+.awesome > :nth-child(2) {
+  color: var(--green);
+  font-size: 3rem;
+  font-weight: bold;
+}
+.awesome > :nth-child(3) {
+  color: var(--gray);
+  font-size: 20px;
+  margin-top: 1rem;
+}
+.s-button {
+  width: 9rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+}
+/* right sided */
+.cards {
+  position: relative;
+}
+.cards > * {
+  position: absolute;
+}
+
+/* blur */
+.s-blur2 {
+  left: 14rem;
+  top: 8rem;
+}
+
+.s-blur1 {
+  top: 13rem;
+  left: -18rem;
+}
+
+.mySwiper .swiper-pagination {
+  position: relative;
+  bottom: 10px;
+  top:0;
+  padding: -10px;
+  margin: 10px;
+}
+
+
+.mySwiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #e2e2e2; 
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #452fc2; 
+  z-index:auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .services {
+    /* margin-top: -100px; */
+    flex-direction: column;
+    gap: 5rem;
+    height: 66rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 17rem;
+  }
+  .cards > * {
+    position: static;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+ .services{
+  position: relative;
+  margin-top: 20px;
+  top: 3rem;
+  padding-left: 40px;
+ }
+ .awesome > :nth-child(1) {
+  font-size: 2.2rem;
+ }
+
+}
+
+
+

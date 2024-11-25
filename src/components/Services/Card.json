@@ -1,0 +1,49 @@
+[
+    {
+      "id": 1,
+      "title": "Graphics Design",
+      "description": "Adobe Photoshop, Adobe Illustrator, Canva",
+      "image": "/Images/Services/Graphics_Design.png",
+      "tools": [
+        { "name": "Photoshop", "icon": "/Images/Services/PhotoShopicon.png" },
+        { "name": "Illustrator", "icon": "/Images/Services/illustratoricon.png" },
+        { "name": "Canva", "icon": "/Images/Services/canvaicon.png" },
+        { "name": "InDesign", "icon": "/Images/Services/indesignicon.png" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Front End Development",
+      "description": "HTMl, React.js, TailwindCss, Bootstrap",
+      "image": "/Images/Services/Codingicon2.png",
+      "tools": [
+        { "name": "HTML5", "icon": "/Images/Services/frontendicon.png" },
+        { "name": "React.js", "icon": "/Images/Services/Reacticon.png" },
+        { "name": "TailwindCss", "icon": "/Images/Services/TailwindCssicon.png" },
+        { "name": "BootStrap", "icon": "/Images/Services/Bootstrupicon.png" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Backend Development",
+      "description": "PHP, Node.js, Laravel",
+      "image": "/Images/Services/Backend.png",
+      "tools": [
+        { "name": "PHP", "icon": "/Images/Services/Phpicon.png" },
+        { "name": "Node.js", "icon": "/Images/Services/Nodeicon.png" },
+        { "name": "Laravel", "icon": "/Images/Services/Laravelicon.png" },
+        { "name": "APIs", "icon": "/Images/Services/Postmanicon.png" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Database Management",
+      "description": "MySQL, MongoDB",
+      "image": "/Images/Services/Databaseicon.png",
+      "tools": [
+        { "name": "MySQL", "icon": "/Images/Services/MySqlicon.png" },
+        { "name": "MongoDB", "icon": "/Images/Services/MongoDbicon.png" }
+      ]
+    }
+  ]
+  

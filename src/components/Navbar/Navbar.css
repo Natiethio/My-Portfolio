@@ -1,0 +1,180 @@
+.n-wrapper {
+  position: fixed;
+  height: 12vh;
+  display: flex;
+  top: 0px;
+  /* left: 0px;
+  right: 0px; */
+  margin-bottom: 2rem;
+  bottom: -10vh;
+  margin-bottom: 200px;
+  z-index: 200;
+  width: 100%;
+  
+  background-color: white;
+}
+.n-left {
+  flex: 1;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  gap: 2rem;
+}
+
+.n-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 50px;
+}
+.n-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 600;
+  padding-right: 30px;
+  gap: 1rem; /* Consistent spacing */
+  position: relative; /* For dropdown positioning */
+}
+
+.n-list {
+  flex: 10;
+}
+.n-list ul{
+  list-style: none;
+  font-size: 20px;
+}
+.hamberger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Fixed width to prevent layout changes */
+  height: 50px; /* Same height for consistency */
+  cursor: pointer;
+}
+/* .humberger svg {
+  display: block; 
+  margin: 0 auto;
+} */
+.n-list > ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 4rem;
+}
+
+.n-list > ul :hover {
+  color: var(--green);
+  cursor: pointer;
+}
+
+.n-button {
+  flex: 2;
+}
+
+.dropdown-menu {
+  position: relative;
+  top: 180%; 
+  right: 9rem; /* Aligns dropdown to the right */
+  background-color: #fff; /* Dropdown background */
+  border: 1px solid var(--green); /* Border matches your theme */
+  border-radius: 8px; /* Rounded edges for a modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 1rem; /* Padding inside the dropdown */
+  z-index: 200; /* Ensure it stays on top */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 200px; /* Set a consistent width for the dropdown */
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+}
+
+.dropdown-menu ul {
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu ul li {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+  text-align: left;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: var(--green);
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown-menu .n-button-2 {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--green);
+  color: white;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .n-button-2:hover {
+  background-color: white;
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+/* Dropdown Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .n-list {
+    display: none;
+  }
+ .hamberger {
+    display: block;
+    display: flex;
+  }
+  .n-button{
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .dropdown-menu {
+    top: 280%;
+    right: 10rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .dropdown-menu {
+    top: 150%;
+    right: 10rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .dropdown-menu {
+    top: 250%;
+    right: 10rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .dropdown-menu {
+    top: 300%;
+    right: 12rem;
+  }
+}

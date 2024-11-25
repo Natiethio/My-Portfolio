@@ -1,0 +1,30 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "image": "/Images/About1.png"
+        },
+        {
+            "id": 2,
+            "image": "/Images/About3.png"
+        },
+        {
+            "id": 3,
+            "image": "/Images/About2.png"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Front End Development",
+            "percentage": 85
+        },
+        {
+            "name": "Back End Development",
+            "percentage": 90
+        },
+        {
+            "name": "Graphics Design",
+            "percentage": 80
+        }
+    ]
+}
