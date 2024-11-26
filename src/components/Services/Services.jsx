@@ -69,19 +69,28 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="services" id="services">
+    <motion.div
+      className="services"
+      id="services"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 1, type: "spring" }}
+      >
       <div className="awesome">
         <span style={{ color: darkMode ? "white" : "" }}>My Current</span>
         <span className="service">Services</span>
         <spane className="">
-          Lorem ipsum is simply dummy text of printing and typesetting.
-          <br />
-          Lorem ipsum has been the industry's standard dummy text.
+          I specialize in creating modern and responsive user interfaces with React.js,
+          TailwindCSS, Bootstrap, HTML, CSS, and JavaScript. On the back end, I develop
+          scalable and secure applications using Laravel, PHP, and Node.js. Additionally,
+          I craft visually appealing designs with Adobe Photoshop, Illustrator, Canva, and
+          InDesign to enhance branding and user experiences.
         </spane>
         <a href={Resume} download>
           <button className="button s-button">Download CV</button>
         </a>
-        <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
+        <div className="blur s-blur1" style={{ background: darkMode ? "#000" :"#ABF1FF94" }}></div>
       </div>
 
       <div className="swiper-container">
@@ -122,7 +131,7 @@ const Services = () => {
                           alt={tool.name}
                           className="icon"
                         />
-                       
+
                       </>
 
                     ))}
@@ -131,13 +140,13 @@ const Services = () => {
                 </div>
 
               </motion.div>
-             
+
             </SwiperSlide>
           ))}
         </Swiper>
         <div className="custom-pagination"></div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

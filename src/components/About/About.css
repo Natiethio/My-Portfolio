@@ -36,8 +36,8 @@
 }
 
 .s-blur1 {
-  top: 13rem;
-  left: -18rem;
+  top: 5rem;
+  left: 18rem;
 }
 
 .about-image img {
@@ -63,7 +63,10 @@
 }
 
 .about-text p {
-  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.2; 
+  text-justify: inter-word; 
+  font-size: 0.9rem;
   color: var(--gray);
 }
 
@@ -93,7 +96,7 @@
 .circle svg {
   width: 100px;
   height: 100px;
-  transform: rotate(-90deg);
+  /* transform: rotate(-90deg); */
 }
 
 circle {
@@ -117,9 +120,7 @@ circle:last-child {
   height: 100px;
 }
 
-svg {
-  transform: rotate(-90deg); /* Progress starts at the top */
-}
+
 
 circle {
   fill: none;

@@ -15,7 +15,7 @@ const About = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % AboutData.images.length);
-    }, 4000); // 7 seconds
+    }, 4000); 
     return () => clearInterval(interval);
   }, []);
 
@@ -49,11 +49,15 @@ const About = () => {
           <div className="about-text">
             <h2 style={{ color: darkMode ? "white" : "" }}>About Me</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel sem vel nisi
-              bibendum fermentum. Curabitur tincidunt at lacus eget efficitur. Proin quis tellus id
-              turpis tincidunt egestas at a nisi.
+             I am Natnael Berhanu Muluneh, a passionate and dedicated computer engineer
+             with a profound focus on software development. My expertise spans on Full Stack 
+             Web Development, Graphics Design, and Computer Networking, equipping me with 
+             a versatile and comprehensive skill set. I am committed to delivering innovative, 
+             high-quality solutions that are thoughtfully designed to meet the unique requirements
+             of users and clients
             </p>
-
+          {/* <div className="blur s-blur1" style={{ background: darkMode ? "#000" :"#ABF1FF94" }}></div> */}
+            
           </div>
         </div>
 
@@ -91,7 +95,7 @@ const About = () => {
                     
                     text={` ${percentage}%`}
                     styles={buildStyles({
-                      rotation: 0.25,
+                      // rotation: 0.25,
                       pathColor: "#5eb939",
                       textColor: "#5eb939",
                       trailColor: "#e0e0e0",
