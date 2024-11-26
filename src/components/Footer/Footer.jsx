@@ -11,7 +11,7 @@ const Footer2 = () => {
                 <h2 className="footer-title">Natnael Berhanu</h2>
                 <p className="footer-location">Addis Abeba, Ethiopia</p>
                 <p className="footer-contact">
-                    <a href="tel:+251911362741 " className="footer-email">+251-970-9516-08</a> |{" "}
+                    <a href="tel:+251970951608" className="footer-email">+251-970-9516-08</a> |{" "}
                     <a href="mailto:natman093@gmail.com" className="footer-email">
                         natman093@gmail.com
                     </a>
