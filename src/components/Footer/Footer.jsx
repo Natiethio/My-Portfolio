@@ -3,10 +3,14 @@ import "./Footer.css";
 import Github from "@iconscout/react-unicons/icons/uil-github";
 import Telegram from "@iconscout/react-unicons/icons/uil-telegram";
 import Linkedin from "@iconscout/react-unicons/icons/uil-linkedin";
-
+import { motion } from "framer-motion";
 const Footer2 = () => {
     return (
-        <footer className="footer">
+        <motion.footer className="footer"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 1.3, delay: 0.2, type: "spring" }}>
             <div className="footer-content">
                 <h2 className="footer-title">Natnael Berhanu</h2>
                 <p className="footer-location">Addis Abeba, Ethiopia</p>
@@ -17,14 +21,14 @@ const Footer2 = () => {
                     </a>
                 </p>
                 <div className="footer-icons">
-                    <a href="https://github.com/Natiethio" target="_blank" rel="noopener noreferrer">
-                        <Github size="30" color="#ffffff" />
+                    <a className="Link" href="https://github.com/Natiethio" target="_blank" rel="noopener noreferrer">
+                        <Github size="30"  />
                     </a>
-                    <a href="https://www.linkedin.com/in/natnael-berhanu-272533254" target="_blank" rel="noopener noreferrer">
-                        <Linkedin size="30" color="#ffffff" />
+                    <a className="Link" href="https://www.linkedin.com/in/natnael-berhanu-272533254" target="_blank" rel="noopener noreferrer">
+                        <Linkedin size="30"  />
                     </a>
-                    <a href="https://t.me/nat_man_o" target="_blank" rel="noopener noreferrer">
-                        <Telegram size="30" color="#ffffff" />
+                    <a className="Link" href="https://t.me/nat_man_o" target="_blank" rel="noopener noreferrer">
+                        <Telegram size="30" />
                     </a>
                 </div>
             </div>
@@ -32,7 +36,7 @@ const Footer2 = () => {
             <p className="footer-bottom">
                 © Natnael Berhanu, All Right Reserved
             </p>
-        </footer>
+        </motion.footer>
     )
 }
 

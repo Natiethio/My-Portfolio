@@ -2,6 +2,7 @@ import React, { useContext, useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
+import { motion } from "framer-motion";
 const Contact = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -33,7 +34,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-form" id="contact">
+
+    <motion.div
+      className="contact-form"
+      id="contact"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 1.5, delay: 0.3, type: "spring" }}>
       {/* left side copy and paste from work section */}
       <div className="w-left">
         <div className="awesome">
@@ -42,7 +50,7 @@ const Contact = () => {
           <span className="contactme">Contact me</span>
           <div
             className="blur s-blur1"
-            style={{ background: "#ABF1FF94" }}
+            style={{ background: darkMode ? "#000" : "#ABF1FF94" }}
           ></div>
         </div>
       </div>
@@ -84,7 +92,7 @@ const Contact = () => {
           ></div> */}
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

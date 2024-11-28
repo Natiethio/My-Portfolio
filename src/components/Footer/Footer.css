@@ -62,6 +62,17 @@
     display: flex;
     justify-content: center;
     gap: 15px;
+    color:#ffffff 
+  }
+
+  .Link{
+    color:#ffffff 
+  }
+
+  .Link:hover {
+   color: #c8c8c8;
+   scale: 1.1;
+   
   }
   
   .footer-divider {

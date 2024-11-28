@@ -1,0 +1,70 @@
+[
+    {
+      "date": "July 2023 - Nov 2023",
+      "companyName": "Kuraz Technologies",
+      "role": "Web Development Intern",
+      "description": "During my internship at Kuraz Technologies, I gained valuable knowledge in JavaScript and PHP frameworks. I also acquired experience working with APIs and full stack development.",
+      "image": "/Images/kurazslogo.png",
+      "skills": [
+        {
+          "name": "Laravel",
+          "icon": "/Images/Services/Laravelicon.png"
+        },
+        {
+          "name": "TailwindCss",
+          "icon": "/Images/Services/TailwindCssicon.png"
+        }
+      ]
+    },
+    {
+      "date": "Sep 2024 - Nov 2024",
+      "companyName": "Beten Ethiopia",
+      "role": "IT Officer Intern",
+      "description": "This 2 month internship experience has given me a deep understanding of creating visually compelling Graphics by preparing Graphics for their PLP and Handyman services and I particpated on web development projects.",
+      "image": "/Images/betenlogoupd.png",
+      "skills": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "/Images/Services/PhotoShopicon.png"
+        },
+        {
+          "name": "Canva",
+          "icon": "/Images/Services/canvaicon.png"
+        },
+        {
+          "name": "React.js",
+          "icon": "/Images/Services/Reacticon.png"
+        },
+        {
+          "name": "TailwindCss",
+          "icon": "/Images/Services/TailwindCssicon.png"
+        }
+      ]
+    },
+    {
+        "date": "March 2024 - Aug 2024",
+        "companyName": "Bahirdar University",
+        "role": "AI-Based Traffic Violation Detection, Alerting and Reporting System",
+        "description": "The system detects violation like Over Spedding ,Red Light and Lane Violation using the trained AI model from video footages of a surveillance camera and save the records like license plate, location, time stamp and evidence capture in cental data base and alert all traffic polices at the detection region.",
+        "image": "/Images/bahirdarlogo.jpg",
+        "skills": [
+          {
+            "name": "Python",
+            "icon": "/Images/Services/Pythonicon.png"
+          },
+          {
+            "name": "Laravel",
+            "icon": "/Images/Services/Laravelicon.png"
+          },
+          {
+            "name": "React.js",
+            "icon": "/Images/Services/Reacticon.png"
+          },
+          {
+            "name": "TailwindCss",
+            "icon": "/Images/Services/TailwindCssicon.png"
+          }
+        ]
+      }
+  ]
+  

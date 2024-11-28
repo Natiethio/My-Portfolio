@@ -26,10 +26,11 @@
 .awesome > :nth-child(3) {
   text-align: justify;
   line-height: 1.2; 
-  text-justify: inter-word; 
+  /* text-justify:auto;  */
   font-size: 0.9rem;
   color: var(--gray);
   margin-top: 1rem;
+  /* color: rgb(95, 189, 58); */
 }
 .s-button {
   width: 9rem;

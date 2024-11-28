@@ -8,6 +8,8 @@ import Services from "./components/Services/Services";
 import Intro from "./components/Intro/Intro";
 import About from './components/About/About';
 import Footer from './components/Footer/Footer'
+import Education from './components/Education/Education';
+import Experience from './components/Experience/Experience';
 import './App.css'
 // import "./index.css"
 import { useContext } from "react";
@@ -29,6 +31,8 @@ function App() {
       <Intro />
       <About/>
       <Services />
+      <Education/>
+      <Experience/>
       <Contact/>
       <Footer/>
     </div>

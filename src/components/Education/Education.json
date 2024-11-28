@@ -1,0 +1,18 @@
+[
+    {
+      "year": "2019 - 2024",
+      "title": "Bachelor's Degree in Computer Engineering",
+      "institute": "Bahir Dar University, Bahirdar Institute of Technology(BIT)",
+      "logo": "/Images/bahirdarlogo.jpg",
+      "description": "I receaved my Bachelor's degree in Computer Engineering from Bahir Dar University. I acquired knowledge and skills in Both Hardware and Software areas."
+    },
+
+    {
+        "year": "2024",
+        "title": "Dereja Acedemy Accelerator Program(DAAP)",
+        "institute": "Dereja",
+        "logo": "/Images/derejalogo.png",
+        "description": "This 2 month internship experience has given me a deep understanding of creating visually compelling graphics for their PLP and Handyman services and web development."
+      }
+  ]
+  

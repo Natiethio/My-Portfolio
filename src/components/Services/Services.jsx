@@ -75,7 +75,8 @@ const Services = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}
-      transition={{ duration: 1, type: "spring" }}
+      // transition={{ duration: 1, type: "spring" }}
+      transition={{ duration: 1.5, delay: 0.3, type: "spring" }}
       >
       <div className="awesome">
         <span style={{ color: darkMode ? "white" : "" }}>My Current</span>

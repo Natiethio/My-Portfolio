@@ -26,8 +26,8 @@ const About = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}
-      transition={{ duration: 0.8, type: "spring" }}
-    >
+      // transition={{ duration: 0.8, type: "spring" }}
+      transition={{ duration: 1.5, delay: 0.3, type: "spring" }}>
       <div className="about-content">
         {/* About Section Grid */}
         <div className="about-grid">
@@ -84,8 +84,8 @@ const About = () => {
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.8, type: "spring" }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 1.5, delay: 0.3, type: "spring" }}
               >
                 {/* Circular Progress Bar */}
                 <div className="circle">
