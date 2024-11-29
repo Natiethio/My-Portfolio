@@ -218,10 +218,10 @@ const Navbar = ({ currentSectionActive }) => {
                 </li>
                 <li>
 
-                  <a href="#experiance"  style={{ color:"#1a2135" }} onClick={(e) => {
-                    handleScroll(e, "experiance"),
+                  <a href="#experience"  style={{ color:"#1a2135" }} onClick={(e) => {
+                    handleScroll(e, "experience"),
                       setIsMenuOpen(false)
-                  }}>Experiance</a>
+                  }}>Experience</a>
                 </li>
                 <li>
                   <Link to="portfolio"  style={{ color:"#1a2135" }} spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
