@@ -32,7 +32,7 @@ const Contact = () => {
           console.log(result.text);
           toast.success("Thank you! I'll get back to you as soon as possible.", {
             position: "top-right",
-            autoClose: 3000,
+            autoClose: 6000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -47,7 +47,7 @@ const Contact = () => {
           console.error(error.text);
           toast.error("Error! Unable to send email. Please try again.", {
             position: "top-right",
-            autoClose: 3000,
+            autoClose: 6000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
