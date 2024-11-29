@@ -26,9 +26,8 @@ const Intro = () => {
                 whileInView={{ left: "0%" }}
                 transition={transition}>
                 <div className="i-name">
-                    <span style={{ color: darkMode ? "white" : "" }} className=''>Hy! I Am</span>
+                    <span style={{ color: darkMode ? "white" : "#242D49" }} className=''>Hy! I Am</span>
                     {/* Typing effect for the name */}
-
 
                     <span className='typing' style={{ fontSize: "2rem", fontWeight: "bold", cursor: 50 }}>Natnael Berhanu</span>
 

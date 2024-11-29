@@ -1,18 +1,24 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Contact = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   const form = useRef();
-  const [done, setDone] = useState(false)
+  const [loading, setLoading] = useState(false);
 
-  // emailjs.send("service_6vnnfs4","template_xahly7k"); olMhqzqkB-akJZlcC
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -24,29 +30,49 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setDone(true);
+          toast.success("Thank you! I'll get back to you as soon as possible.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: darkMode ? "dark" : "light",
+            style: { backgroundColor: "green", color: "#fff" },
+          });
           form.current.reset();
+          setLoading(false);
         },
         (error) => {
-          console.log(error.text);
+          console.error(error.text);
+          toast.error("Error! Unable to send email. Please try again.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: darkMode ? "dark" : "light",
+            style: { backgroundColor: "red", color: "#fff" },
+          });
+          setLoading(false);
         }
       );
   };
 
   return (
-
     <motion.div
       className="contact-form"
       id="contact"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}
-      transition={{ duration: 1.5, delay: 0.3, type: "spring" }}>
-      {/* left side copy and paste from work section */}
+      transition={{ duration: 1.5, delay: 0.3, type: "spring" }}
+    >
+      {/* left side */}
       <div className="w-left">
         <div className="awesome">
-          {/* darkMode */}
-          <span style={{ color: darkMode ? 'white' : '' }}>Get in Touch</span>
+          <span style={{ color: darkMode ? "white" : "" }}>Get in Touch</span>
           <span className="contactme">Contact me</span>
           <div
             className="blur s-blur1"
@@ -84,12 +110,9 @@ const Contact = () => {
             placeholder="Message"
             required
           />
-          <input type="submit" value="Send" className="button" />
-          <span className="spanemail">{done && "Thank You For Contacting Me"}</span>
-          {/* <div
-            className="blur c-blur1"
-            style={{ background: "var(--purple)" }}
-          ></div> */}
+          <button type="submit" className="button">
+            {loading ? "Sending..." : "Send"}
+          </button>
         </form>
       </div>
     </motion.div>

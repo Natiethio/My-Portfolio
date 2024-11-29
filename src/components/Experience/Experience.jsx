@@ -10,9 +10,8 @@ const ExperienceB = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
-    
     <motion.div 
-    id="experiance" 
+    id="experience" 
     className="experience-container"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}

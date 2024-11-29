@@ -4,43 +4,24 @@ import "./Navbar.css";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { themeContext } from "../../Context";
-const Navbar = () => {
+const Navbar = ({ currentSectionActive }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentsection, setSection] = useState(null)
   const dropdownRef = useRef(null);
 
-  useEffect(() => {
-    const handleScrolldropdown = () => {
-      setIsScrolled(window.scrollY > 0); // Detect if scrolled from top
-      setIsMenuOpen(false)
-    };
 
-    window.addEventListener("scroll", handleScrolldropdown);
-    return () => window.removeEventListener("scroll", handleScrolldropdown);
-  }, []);
 
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
-  const handleScroll2 = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      const offset = 800;
-      const elementPosition = section.offsetTop;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const handleScroll = (e, sectionId) => {
     e.preventDefault();
     const section = document.getElementById(sectionId);
 
     if (section) {
+      setSection(sectionId)
       const headerOffset = 30;
       const sectionPosition = section.offsetTop - headerOffset;
 
@@ -50,6 +31,17 @@ const Navbar = () => {
       });
     }
   };
+
+  useEffect(() => {
+    const handleScrolldropdown = () => {
+      setIsScrolled(window.scrollY > 0); 
+      setIsMenuOpen(false)
+       setSection(null)
+    };
+
+    window.addEventListener("scroll", handleScrolldropdown);
+    return () => window.removeEventListener("scroll", handleScrolldropdown);
+  }, []);
 
 
   useEffect(() => {
@@ -91,30 +83,85 @@ const Navbar = () => {
           <div className="n-list">
             <ul style={{ listStyleType: "none" }}>
               <li>
-                <Link to="Navbar" spy={true} smooth={true}>
+                {/* <Link to="Navbar" className="nav-link" spy={true} smooth={true}>
                   Home
-                </Link>
+                </Link> */}
+                <a href="#Navbar" 
+                  className={`nav-link ${
+                    currentSectionActive === "Navbar" ? "active" : ""
+                  }`}
+                  style={{
+                    color:
+                    currentSectionActive == "Navbar"
+                        ? "#5eb939"
+                        : darkMode
+                        ? "#fff"
+                        : "#242D49",
+                  }}
+                  onClick={(e) => handleScroll(e, "Navbar")}>Home
+                </a>
               </li>
               <li>
                 {/* <Link to="about" spy={true} smooth={true}>
                   About
                 </Link> */}
-                <a href="#about" style={{ color: darkMode ? "#fff" : "#242D49" }} onClick={(e) => handleScroll(e, "about")}>About</a>
+                <a href="#about" 
+                  className={`nav-link ${
+                    currentSectionActive === "about" ? "active" : ""
+                  }`}
+                  style={{
+                    color:
+                    currentSectionActive == "about"
+                        ? "#5eb939"
+                        : darkMode
+                        ? "#fff"
+                        : "#242D49",
+                  }}
+                  onClick={(e) => handleScroll(e, "about")}>About
+                </a>
               </li>
               <li>
                 {/* <Link to="services" spy={true} smooth={true}>
                 Serivces
               </Link> */}
-                <a href="#services" spy={true} smooth={true} style={{ color: darkMode ? "#fff" : "#242D49" }} onClick={(e) => handleScroll(e, "services")}>Services</a>
+                <a href="#services" 
+                  className={`nav-link ${
+                    currentSectionActive === "services" ? "active" : ""
+                  }`}
+                  style={{
+                    color:
+                    currentSectionActive == "services"
+                        ? "#5eb939"
+                        : darkMode
+                        ? "#fff"
+                        : "#242D49",
+                  }}
+                  onClick={(e) => handleScroll(e, "services")}>Services
+                </a>
               </li>
+
               <li>
-                {/* <Link to="experiance" spy={true} smooth={true}>
-                  Experience
-                </Link> */}
-                <a href="#experiance" spy={true} smooth={true} style={{ color: darkMode ? "#fff" : "#242D49" }} onClick={(e) => handleScroll(e, "experiance")}>Experience</a>
+                {/* <Link to="services" spy={true} smooth={true}>
+                Serivces
+              </Link> */}
+                <a href="#experience" 
+                  className={`nav-link ${
+                    currentsection || currentSectionActive === "education" ? "active" : ""
+                  }`}
+                  style={{
+                    color:
+                    currentSectionActive == "education"
+                        ? "#5eb939"
+                        : darkMode
+                        ? "#fff"
+                        : "#242D49",
+                  }}
+                  onClick={(e) => handleScroll(e, "experience")}>Experience
+                </a>
               </li>
+
               <li>
-                <Link to="portfolio" spy={true} smooth={true}>
+                <Link to="portfolio" className="nav-link" spy={true} smooth={true}>
                   Protfolio
                 </Link>
               </li>
@@ -138,7 +185,7 @@ const Navbar = () => {
             <div className="dropdown-menu" ref={dropdownRef} id="Navbar">
               <ul>
                 <li>
-                  <Link to="Navbar" spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
+                  <Link to="Navbar"  style={{ color:"#1a2135" }} spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
                     Home
                   </Link>
                 </li>
@@ -146,7 +193,7 @@ const Navbar = () => {
                   {/* <Link to="about" spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
                     About
                   </Link> */}
-                  <a href="#about" style={{ color: darkMode ? "#fff" : "#000" }} onClick={(e) => {
+                  <a href="#about" style={{ color:"#1a2135" }} onClick={(e) => {
                     handleScroll(e, "about"),
                       setIsMenuOpen(false)
                   }}>About</a>
@@ -155,8 +202,8 @@ const Navbar = () => {
                   {/* <Link to="services" spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
                     Services
                   </Link> */}
-                  <a href="#services" style={{ color: darkMode ? "#fff" : "#000" }} onClick={(e) => {
-                      handleScroll(e, "services"),
+                  <a href="#services"  style={{ color:"#1a2135" }} onClick={(e) => {
+                    handleScroll(e, "services"),
                       setIsMenuOpen(false)
                   }}>Services</a>
                 </li>
@@ -164,20 +211,20 @@ const Navbar = () => {
                   {/* <Link to="works" spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
                     Experience
                   </Link> */}
-                  <a href="#education" style={{ color: darkMode ? "#fff" : "#000" }} onClick={(e) => {
-                      handleScroll(e, "education"),
+                  <a href="#education"  style={{ color:"#1a2135" }} onClick={(e) => {
+                    handleScroll(e, "education"),
                       setIsMenuOpen(false)
                   }}>Education</a>
                 </li>
                 <li>
 
-                  <a href="#experiance" style={{ color: darkMode ? "#fff" : "#000" }} onClick={(e) => {
-                      handleScroll(e, "experiance"),
+                  <a href="#experiance"  style={{ color:"#1a2135" }} onClick={(e) => {
+                    handleScroll(e, "experiance"),
                       setIsMenuOpen(false)
                   }}>Experiance</a>
                 </li>
                 <li>
-                  <Link to="portfolio" spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
+                  <Link to="portfolio"  style={{ color:"#1a2135" }} spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
                     Portfolio
                   </Link>
                 </li>
@@ -190,9 +237,10 @@ const Navbar = () => {
               <Link to="contact" spy={true} smooth={true}>
                 <button className="button n-button-2" onClick={(e) => {
                   handleScroll(e, "contact")
-                  setIsMenuOpen(false)}}
-                  >
-                    Contact</button>
+                  setIsMenuOpen(false)
+                }}
+                >
+                  Contact</button>
               </Link>
             </div>
           )}

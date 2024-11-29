@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Navbar from "./components/Navbar/Navbar";
@@ -19,6 +19,31 @@ function App() {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
+  const [currentSection, setCurrentSection] = useState("");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCurrentSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div
       className="App "
@@ -26,15 +51,27 @@ function App() {
         background: darkMode ? "black" : "",
         color: darkMode ? "white" : "",
       }}>
-      <Navbar />
-      {/* <Navbar2 /> */}
-      <Intro />
-      <About/>
-      <Services />
-      <Education/>
-      <Experience/>
-      <Contact/>
-      <Footer/>
+      <Navbar currentSectionActive={currentSection} />
+      {/* <Navbar /> */}
+      <section id="Navbar">
+        <Intro />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="services">
+        <Services />
+      </section>
+      <section id="education">
+        <Education />
+      </section>
+      <section id="experience">
+        <Experience />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
+      <Footer />
     </div>
   )
 }
