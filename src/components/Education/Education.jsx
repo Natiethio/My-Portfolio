@@ -34,9 +34,9 @@ const Experience = () => {
                                 <img src={item.logo} alt={item.title} />
                             </div>
                             <div className="experience-content">
-                                <p className="experience-date">{item.year}</p>
+                                <span className="experience-date">{item.year}</span>
                                 <h3 className="experience-title">{item.title}</h3>
-                                <p className="experience-company">{item.institute}</p>
+                                <span className="experience-company">{item.institute}</span>
                                 {/* <p className="experience-company">{item.description}</p> */}
                             </div>
                         </div>
