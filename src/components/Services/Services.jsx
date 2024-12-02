@@ -117,9 +117,9 @@ const Services = () => {
                 pagination={{
                   clickable: true,
                 }}
-                className="cards mySwiper "
+                className="cardservice mySwiper "
               >
-                <div className="card">
+                <div className="cardser">
                   <img src={service.image} alt={service.title} className="service-img" />
                   <span className="service-title">{service.title}</span>
                   <span className="service-desc" style={{ fontSize: "20px" }}>{service.description}</span>

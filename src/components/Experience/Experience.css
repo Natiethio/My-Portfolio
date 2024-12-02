@@ -59,6 +59,7 @@
     line-height: 1rem;
     color: var(--black);
     text-align: justify;
+   
   }
   .vertical-timeline--two-columns .vertical-timeline-element-content{
     padding: 0.9rem

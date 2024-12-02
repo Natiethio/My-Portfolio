@@ -217,23 +217,21 @@ const Navbar = ({ currentSectionActive }) => {
                   }}>Education</a>
                 </li>
                 <li>
-
                   <a href="#experience"  style={{ color:"#1a2135" }} onClick={(e) => {
                     handleScroll(e, "experience"),
                       setIsMenuOpen(false)
                   }}>Experience</a>
                 </li>
                 <li>
-                  <Link to="portfolio"  style={{ color:"#1a2135" }} spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
+                  {/* <Link to="portfolio"  style={{ color:"#1a2135" }} spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
                     Portfolio
-                  </Link>
+                  </Link> */}
+                  <a href="#portfolio"  style={{ color:"#1a2135" }} onClick={(e) => {
+                    handleScroll(e, "portfolio"),
+                      setIsMenuOpen(false)
+                  }}>Portfolio</a>
                 </li>
               </ul>
-              {/* <Link to="contact" spy={true} smooth={true} onClick={() => {
-                setIsMenuOpen(false)
-                }}>
-                <button className="button n-button-2">Contact</button>
-              </Link> */}
               <Link to="contact" spy={true} smooth={true}>
                 <button className="button n-button-2" onClick={(e) => {
                   handleScroll(e, "contact")

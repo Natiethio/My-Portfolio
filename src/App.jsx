@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Portfolio from './components/Portfolio/Portfolio';
 import Navbar from "./components/Navbar/Navbar";
 // import Navbar2 from './components/Navbar/Navbar2';
 import Contact from './components/Contact/Contact';
@@ -67,6 +68,9 @@ function App() {
       </section>
       <section id="experience">
         <Experience />
+      </section>
+      <section id="portfolio">
+        <Portfolio />
       </section>
       <section id="contact">
         <Contact />

@@ -1,0 +1,292 @@
+[
+    {
+        "id": 1,
+        "project_name": "Local Bus Ticket Management",
+        "image": "/Images/Portfolio/BusTicket1.jpg",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+        "github_link": "https://github.com/Natiethio/Bus-Ticket-System",
+        "demo_link": "",
+        "type": "Web App",
+        "frameworks": [
+            {
+              "name": "Laravel",
+              "icon": "/Images/Services/Laravelicon.png"
+            },
+            {
+              "name": "Bootstrap",
+              "icon": "/Images/Services/Bootstrupicon.png"
+            }
+          ]
+      },
+      {
+        "id": 2,
+        "project_name": "E-Commerce App",
+        "image": "/Images/Portfolio/Home1.jpeg",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+        "github_link": "https://github.com/Natiethio/Gion-Ecommerce-site",
+        "demo_link": "",
+        "type": "Web App",
+        "frameworks": [
+            {
+              "name": "Laravel",
+              "icon": "/Images/Services/Laravelicon.png"
+            },
+            {
+              "name": "Bootstrap",
+              "icon": "/Images/Services/Bootstrupicon.png"
+            }
+          ]
+      },
+    {
+      "id": 3,
+      "project_name": "E-Expo Front End",
+      "image": "/Images/Portfolio/E-Expo1.jpeg",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+      "github_link": "https://github.com/Natiethio/E-Expo_Frontend",
+      "demo_link": "https://beten-e-expo-natnael-berhanus-projects.vercel.app/",
+      "type": "Web App",
+      "frameworks": [
+        {
+          "name": "React",
+          "icon": "/Images/Services/Reacticon.png"
+        },
+        {
+          "name": "TailwindCss",
+          "icon": "/Images/Services/TailwindCssicon.png"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "project_name": "Book Store Management System",
+      "image": "/Images/Portfolio/BookStore1.png",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+      "github_link": "",
+      "demo_link": "",
+      "type": "Web App",
+      "frameworks": [
+        {
+          "name": "PHP",
+          "icon": "/Images/Services/Phpicon.png"
+        },
+        {
+          "name": "HTML-CSS-JS",
+          "icon": "/Images/Services/frontendicon.png"
+        }
+      ]
+    },
+    {
+        "id": 5,
+        "project_name": "Examination Management System",
+        "image": "/Images/Portfolio/Examadmin.png",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+        "github_link": "https://github.com/Natiethio/Digital-Examination-App-",
+        "demo_link": "",
+        "type": "DeskTop App",
+        "frameworks": [
+          {
+            "name": "JAVA",
+            "icon": "/Images/Services/Java.png"
+          }
+        ]
+      },
+      {
+          "id": 6,
+          "project_name": "Graphic Design",
+          "image": "/Images/Portfolio/Balemuyaye.png",
+          "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+          "github_link": "https://www.behance.net/natnaelberhanu2/workinprogress/6805339",
+          "demo_link": "",
+          "type": "Graphics",
+          "frameworks": [
+            {
+              "name": "Adobe Photoshop",
+              "icon": "/Images/Services/PhotoShopicon.png"
+            },
+            {
+              "name": "Canva",
+              "icon": "/Images/Services/canvaicon.png"
+            }
+          ]
+        },
+        {
+            "id": 7,
+            "project_name": "Graphic Design",
+            "image": "/Images/Portfolio/Coffee.png",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+            "github_link": "https://www.behance.net/natnaelberhanu2/workinprogress/6805341",
+            "demo_link": "",
+            "type": "Graphics",
+            "frameworks": [
+                {
+                  "name": "Adobe Photoshop",
+                  "icon": "/Images/Services/PhotoShopicon.png"
+                },
+                {
+                  "name": "Canva",
+                  "icon": "/Images/Services/canvaicon.png"
+                }
+              ]
+          },
+          {
+            "id": 8,
+            "project_name": "Graphic Design",
+            "image": "/Images/Portfolio/digital_markating2.png",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+            "github_link": "https://www.behance.net/natnaelberhanu2/workinprogress/6805353",
+            "demo_link": "",
+            "type": "Graphics",
+            "frameworks": [
+                {
+                  "name": "Adobe Photoshop",
+                  "icon": "/Images/Services/PhotoShopicon.png"
+                },
+                {
+                  "name": "Canva",
+                  "icon": "/Images/Services/canvaicon.png"
+                }
+              ]
+          },
+          {
+            "id": 9,
+            "project_name": "Graphic Design",
+            "image": "/Images/Portfolio/design8d.png",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+            "github_link": "https://www.behance.net/natnaelberhanu2/workinprogress/6805393",
+            "demo_link": "",
+            "type": "Graphics",
+            "frameworks": [
+                {
+                  "name": "Adobe Photoshop",
+                  "icon": "/Images/Services/PhotoShopicon.png"
+                },
+                {
+                  "name": "Canva",
+                  "icon": "/Images/Services/canvaicon.png"
+                }
+              ]
+          },
+          {
+            "id": 10,
+            "project_name": "Graphic Design",
+            "image": "/Images/Portfolio/Sunsilk_shampoo2.jpg",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+            "github_link": "https://www.behance.net/natnaelberhanu2/workinprogress/6805395",
+            "demo_link": "",
+            "type": "Graphics",
+            "frameworks": [
+                {
+                  "name": "Adobe Photoshop",
+                  "icon": "/Images/Services/PhotoShopicon.png"
+                },
+                {
+                  "name": "Canva",
+                  "icon": "/Images/Services/canvaicon.png"
+                }
+              ]
+          },
+          {
+            "id": 11,
+            "project_name": "Graphic Design",
+            "image": "/Images/Portfolio/betenfollowus3.png",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+            "github_link": "https://www.behance.net/natnaelberhanu2/workinprogress/6805375",
+            "demo_link": "",
+            "type": "Graphics",
+            "frameworks": [
+                {
+                  "name": "Adobe Photoshop",
+                  "icon": "/Images/Services/PhotoShopicon.png"
+                },
+                {
+                  "name": "Canva",
+                  "icon": "/Images/Services/canvaicon.png"
+                }
+              ]
+          },
+          {
+            "id": 12,
+            "project_name": "Graphic Design",
+            "image": "/Images/Portfolio/balemuyaye1upd.png",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+            "github_link": "https://www.behance.net/natnaelberhanu2/workinprogress/6805359",
+            "demo_link": "",
+            "type": "Graphics",
+            "frameworks": [
+                {
+                  "name": "Adobe Photoshop",
+                  "icon": "/Images/Services/PhotoShopicon.png"
+                },
+                {
+                  "name": "Canva",
+                  "icon": "/Images/Services/canvaicon.png"
+                }
+              ]
+          },
+          {
+            "id": 13,
+            "project_name": "Graphic Design",
+            "image": "/Images/Portfolio/PLPAM.png",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+            "github_link": "https://www.behance.net/natnaelberhanu2/workinprogress/6805443",
+            "demo_link": "",
+            "type": "Graphics",
+            "frameworks": [
+                {
+                  "name": "Adobe Photoshop",
+                  "icon": "/Images/Services/PhotoShopicon.png"
+                },
+                {
+                  "name": "Canva",
+                  "icon": "/Images/Services/canvaicon.png"
+                }
+              ]
+          },
+          {
+            "id": 14,
+            "project_name": "Graphic Design",
+            "image": "/Images/Portfolio/mirinda.png",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+            "github_link": "https://www.behance.net/natnaelberhanu2/workinprogress/6805453",
+            "demo_link": "",
+            "type": "Graphics",
+            "frameworks": [
+                {
+                  "name": "Adobe Photoshop",
+                  "icon": "/Images/Services/PhotoShopicon.png"
+                },
+                {
+                  "name": "Canva",
+                  "icon": "/Images/Services/canvaicon.png"
+                }
+              ]
+          },
+      {
+        "id": 15,
+        "project_name": "AI Based Traffic Violation Detection Alerting and Reporting System",
+        "image": "/Images/Portfolio/Aione.jpeg",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+        "github_link": "https://github.com/Natiethio/AI-Based-_Traffic_Violation_detection_Alerting_and_Reporting_System",
+        "demo_link": "",
+        "type": "AI Project",
+        "frameworks": [
+            {
+                "name": "Python",
+                "icon": "/Images/Services/Pythonicon.png"
+              },
+              {
+                "name": "Laravel",
+                "icon": "/Images/Services/Laravelicon.png"
+              },
+              {
+                "name": "React.js",
+                "icon": "/Images/Services/Reacticon.png"
+              },
+              {
+                "name": "TailwindCss",
+                "icon": "/Images/Services/TailwindCssicon.png"
+              }
+          ]
+      }
+  ]
+  
