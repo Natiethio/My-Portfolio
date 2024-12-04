@@ -69,6 +69,7 @@ function App() {
       <section id="experience">
         <Experience />
       </section>
+      
       <section id="portfolio">
         <Portfolio />
       </section>

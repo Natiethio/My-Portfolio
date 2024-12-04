@@ -223,9 +223,6 @@ const Navbar = ({ currentSectionActive }) => {
                   }}>Experience</a>
                 </li>
                 <li>
-                  {/* <Link to="portfolio"  style={{ color:"#1a2135" }} spy={true} smooth={true} onClick={() => setIsMenuOpen(false)}>
-                    Portfolio
-                  </Link> */}
                   <a href="#portfolio"  style={{ color:"#1a2135" }} onClick={(e) => {
                     handleScroll(e, "portfolio"),
                       setIsMenuOpen(false)

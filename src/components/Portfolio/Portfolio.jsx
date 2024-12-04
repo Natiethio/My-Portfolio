@@ -44,7 +44,15 @@ const Portfolio = () => {
 
 
     return (
-        <div id="portfolio" className="portfolio-container">
+        <motion.div
+            className="portfolio-container"
+            id="portfolio"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.01 }}
+            // transition={{ duration: 1, type: "spring" }}
+            transition={{ duration: 1.5, delay: 0.3, type: "spring" }}
+        >
             <div className="portfolio-header">
                 <span style={{ color: darkMode ? "white" : "" }}>My</span>
                 <span className="">Portfolios</span>
@@ -69,21 +77,21 @@ const Portfolio = () => {
                 animate="visible"
                 variants={animationVariants}>
                 {paginatedData.map((item) => (
-                   
-                        <motion.div
-                            key={item.id}
-                            className="portfolio-card"
-                            style={{ backgroundColor:darkMode? "#66cb3e": "white", border: darkMode? "none": "" }}
-                            whileHover={{ scale: 1.03 }} 
-                        >
-                        <div className="image-wrapper"  style={{ backgroundColor:"white" }}>
+
+                    <motion.div
+                        key={item.id}
+                        className="portfolio-card"
+                        style={{ backgroundColor: darkMode ? "#66cb3e" : "white", border: darkMode ? "none" : "" }}
+                        whileHover={{ scale: 1.03 }}
+                    >
+                        <div className="image-wrapper" style={{ backgroundColor: "white" }}>
                             <img src={item.image} alt={item.project_name} className="portfolio-image" />
                         </div>
-                        
+
                         <div className="card-content">
                             <div className="project-title">{item.project_name}</div>
                             {/* <p className="project-description">{item.description}</p> */}
-                            
+
                             <div className="frameworks-container">
                                 {item.frameworks.map((framework, index) => (
                                     <div key={index} className="framework-item">
@@ -96,7 +104,7 @@ const Portfolio = () => {
                                     </div>
                                 ))}
                             </div>
-                           
+
                         </div>
                         <div className="card-actions" >
                             {item.github_link && (
@@ -123,7 +131,7 @@ const Portfolio = () => {
                     </motion.div>
                 ))}
             </motion.section>
-              
+
 
             <section className="pagination">
                 <button
@@ -151,7 +159,8 @@ const Portfolio = () => {
                     <FaChevronRight />
                 </button>
             </section>
-        </div>
+        </motion.div>
+
     );
 }
 
