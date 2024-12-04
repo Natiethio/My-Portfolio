@@ -6,6 +6,8 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import Popup from 'reactjs-popup';
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 
 
@@ -16,10 +18,13 @@ const Portfolio = () => {
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 6;
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [graphicsImages, setGraphicsImages] = useState(portfolioData)
 
     const animationVariants = {
-        hidden: { scale: 0.9, opacity: 0 }, // Initial state
-        visible: { scale: 1, opacity: 1, transition: { duration: 0.5 } }, // Final state
+        hidden: { scale: 0.9, opacity: 0 },
+        visible: { scale: 1, opacity: 1, transition: { duration: 0.5 } },
     };
 
     useEffect(() => {
@@ -28,7 +33,8 @@ const Portfolio = () => {
         } else {
             setFilteredData(portfolioData.filter((item) => item.type === selectedCategory));
         }
-        setCurrentPage(1); // Reset to page 1 on category change
+        setCurrentPage(1);
+        setGraphicsImages(portfolioData.filter((item) => item.type === "Graphics"))
     }, [selectedCategory]);
 
     const totalPages = Math.ceil(filteredData.length / itemsPerPage);
@@ -41,6 +47,13 @@ const Portfolio = () => {
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
     );
+
+    const images = paginatedData.map((item) => item.image);
+
+    const openLightbox = (index) => {
+        setCurrentImageIndex(index);
+        setIsOpen(true);
+    };
 
 
     return (
@@ -70,22 +83,32 @@ const Portfolio = () => {
                 ))}
             </section>
 
+
             <motion.section
                 className="portfolio-grid"
                 key={paginatedData}
                 initial="hidden"
                 animate="visible"
                 variants={animationVariants}>
-                {paginatedData.map((item) => (
+                {paginatedData.map((item, index) => (
 
                     <motion.div
-                        key={item.id}
+                        key={index}
                         className="portfolio-card"
                         style={{ backgroundColor: darkMode ? "#66cb3e" : "white", border: darkMode ? "none" : "" }}
                         whileHover={{ scale: 1.03 }}
                     >
                         <div className="image-wrapper" style={{ backgroundColor: "white" }}>
-                            <img src={item.image} alt={item.project_name} className="portfolio-image" />
+                            <img src={item.image}
+                                alt={item.project_name}
+                                // className="portfolio-image"
+                                // onClick={() => {
+                                //     setCurrentImageIndex(index); // Set the current index to the clicked image
+                                //     setIsOpen(true); // Open the lightbox
+                                // }}
+                                style={{ cursor: "pointer" }}
+                            />
+
                         </div>
 
                         <div className="card-content">
@@ -117,7 +140,34 @@ const Portfolio = () => {
                                     View
                                 </a>
                             )}
-                            {item.demo_link && (
+                            {item.type === "Graphics" ? (
+                                // <button
+                                //     onClick={() => openLightbox(item.image)}
+                                //     className="button demo-button"
+                                // >
+                                //     Demo
+                                // </button>
+                                <a
+                                    href={item.image} // Direct link to the image
+                                    target="_blank" // Opens in a new tab
+                                    rel="noopener noreferrer"
+                                    className="button demo-button"
+                                >
+                                    View
+                                </a>
+                            ) : (
+                                item.demo_link && (
+                                    <a
+                                        href={item.demo_link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="button demo-button"
+                                    >
+                                        Demo
+                                    </a>
+                                )
+                            )}
+                            {/* {item.demo_link && (
                                 <a
                                     href={item.demo_link}
                                     target="_blank"
@@ -126,11 +176,36 @@ const Portfolio = () => {
                                 >
                                     Demo
                                 </a>
-                            )}
+                            )} */}
                         </div>
                     </motion.div>
                 ))}
             </motion.section>
+            {/* Lightbox Component */}
+            {/* {isLightboxOpen && (
+                    <Lightbox
+                        mainSrc={currentImage}
+                        onCloseRequest={() => setIsLightboxOpen(false)}
+                    />
+                )} */}
+
+            {/* {isOpen && (
+                <Lightbox
+                    mainSrc={paginatedData[currentImageIndex].image} // Current image
+                    nextSrc={paginatedData[(currentImageIndex + 1) % paginatedData.length]?.src} // Next image
+                    prevSrc={paginatedData[(currentImageIndex + paginatedData.length - 1) % paginatedData.length]?.image} // Previous image
+                    onCloseRequest={() => setIsOpen(false)} // Close lightbox
+                    onMovePrevRequest={() =>
+                        setCurrentImageIndex((currentImageIndex + paginatedData.length - 1) % paginatedData.length)
+                    }
+                    onMoveNextRequest={() =>
+                        setCurrentImageIndex((currentImageIndex + 1) % paginatedData.length)
+                    }
+                    imageTitle={`Image ${paginatedData[currentImageIndex].id}`} // Optional title or description
+                    imageCaption={paginatedData[currentImageIndex].project_name} // Optional caption
+                />
+            )} */}
+
 
 
             <section className="pagination">
