@@ -61,7 +61,7 @@
       "project_name": "Book Store Management System",
       "image": "/Images/Portfolio/BookStore1.png",
       "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
-      "github_link": "",
+      "github_link": "https://github.com/Natiethio/Book_Store_Managemet_System",
       "demo_link": "",
       "type": "Web App",
       "frameworks": [
