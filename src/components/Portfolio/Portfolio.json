@@ -86,7 +86,7 @@
     "frameworks": [
       {
         "name": "Node.js",
-        "icon": "/Images/Services/Nodeicon.png"
+        "icon": "/Images/Services/Nodeicon2.png"
       },
       {
         "name": "Express.js",
@@ -99,6 +99,10 @@
       {
         "name": "MongoDB",
         "icon": "/Images/Services/MongoDbicon.png"
+      },
+      {
+        "name": "Cloudinary",
+        "icon": "/Images/Services/CloudinaryLogo.png"
       }
     ]
   },
