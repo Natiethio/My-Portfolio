@@ -125,6 +125,7 @@
   @media screen and (max-width: 992px) {
     .Intro {
       flex-direction: column;
+      /* flex-direction: column-reverse; */
       /* gap: 0.5rem; */
       height: 64rem;
       padding-left: 0px;

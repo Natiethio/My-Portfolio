@@ -34,9 +34,10 @@ const Intro = () => {
 
                     <ReactTyped
                         strings={[
+                            "Back End Developer",
                             "Graphics Designer",
                             "Front End Developer",
-                            "Back End Developer"
+
                         ]}
                         cursorClassName="cursor"
                         typeSpeed={100}      
