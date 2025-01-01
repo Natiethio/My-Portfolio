@@ -8,6 +8,10 @@ import { motion } from "framer-motion";
 import Popup from 'reactjs-popup';
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, FreeMode, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/autoplay";
 
 
 
@@ -96,19 +100,43 @@ const Portfolio = () => {
                         key={index}
                         className="portfolio-card"
                         style={{ backgroundColor: darkMode ? "#66cb3e" : "white", border: darkMode ? "none" : "" }}
-                        whileHover={{ scale: 1.03 }}
-                    >
-                        <div className="image-wrapper" style={{ backgroundColor: "white" }}>
-                            <img src={item.image}
-                                alt={item.project_name}
-                                // className="portfolio-image"
-                                // onClick={() => {
-                                //     setCurrentImageIndex(index); // Set the current index to the clicked image
-                                //     setIsOpen(true); // Open the lightbox
-                                // }}
-                                style={{ cursor: "pointer" }}
-                            />
+                        whileHover={{ scale: 1.03 }}>
 
+                        <div className="image-wrapper" style={{ backgroundColor: "white" }}>
+                            {item.image.length > 1 ? (
+                                <Swiper
+                                    modules={[Autoplay, Pagination]}
+                                    spaceBetween={50}
+                                    slidesPerView={1}
+                                    autoplay={{ delay: 3000 }}
+                                    loop={true}
+                                    pagination={{
+                                        el: ".custom-pagination",
+                                        clickable: true,
+                                    }}
+                                    speed={1500}
+                                    className="image-wrapper"
+                                >
+                                    {item.image.map((image, id) => (
+                                        <SwiperSlide key={item.id}>
+                                            <img
+                                                src={image}
+                                                alt={`${item.project_name} Image ${id + 1}`}
+                                                style={{ cursor: "pointer" }}
+                                            />
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            ) : (
+                                <img
+                                    src={item.image[0]}
+                                    alt={item.project_name}
+                                    style={{ cursor: "pointer" }}
+                                />
+                            )}
+                            {/* <img src={item.image}
+                                alt={item.project_name}
+                                style={{ cursor: "pointer" }}/> */}
                         </div>
 
                         <div className="card-content">
