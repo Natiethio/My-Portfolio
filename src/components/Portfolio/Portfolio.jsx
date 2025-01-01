@@ -134,9 +134,6 @@ const Portfolio = () => {
                                     style={{ cursor: "pointer" }}
                                 />
                             )}
-                            {/* <img src={item.image}
-                                alt={item.project_name}
-                                style={{ cursor: "pointer" }}/> */}
                         </div>
 
                         <div className="card-content">
@@ -169,15 +166,9 @@ const Portfolio = () => {
                                 </a>
                             )}
                             {item.type === "Graphics" ? (
-                                // <button
-                                //     onClick={() => openLightbox(item.image)}
-                                //     className="button demo-button"
-                                // >
-                                //     Demo
-                                // </button>
                                 <a
-                                    href={item.image} // Direct link to the image
-                                    target="_blank" // Opens in a new tab
+                                    href={item.image[0]}
+                                    target="_blank" 
                                     rel="noopener noreferrer"
                                     className="button demo-button"
                                 >
