@@ -27,6 +27,7 @@ const Portfolio = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [graphicsImages, setGraphicsImages] = useState(portfolioData)
     const [loadingStates, setLoadingStates] = useState({});
+    const [isOffline, setIsOffline] = useState(!navigator.onLine);
 
     const animationVariants = {
         hidden: { scale: 0.9, opacity: 0 },
@@ -61,6 +62,26 @@ const Portfolio = () => {
         setIsOpen(true);
     };
 
+    // useEffect(() => {
+
+
+
+    //     const handleOnline = () => {
+    //         setIsOffline(false);
+           
+    //     };
+
+    //     const handleOffline = () => setIsOffline(true);
+
+    //     window.addEventListener("online", handleOnline);
+    //     window.addEventListener("offline", handleOffline);
+
+    //     return () => {
+    //         window.removeEventListener("online", handleOnline);
+    //         window.removeEventListener("offline", handleOffline);
+    //     };
+    // }, []);
+
     // Reset loading states when data changes
     useEffect(() => {
         const initialLoadingStates = {};
@@ -80,6 +101,8 @@ const Portfolio = () => {
     };
 
 
+
+
     return (
         <motion.div
             className="portfolio-container"
@@ -90,6 +113,14 @@ const Portfolio = () => {
             // transition={{ duration: 1, type: "spring" }}
             transition={{ duration: 1.5, delay: 0.3, type: "spring" }}
         >
+
+            {/* {isOffline && (
+                // <Alert variant="warning" className="d-flex justify-content-center align-items-center text-center">
+                //     Opps! You appear to be offline. Please check your internet connection.
+                // </Alert>
+                // alert("Opps! You appear to be offline. Please check your internet connection")
+                <p>jhjhhjjh</p>
+            )} */}
             <div className="portfolio-header">
                 <span style={{ color: darkMode ? "white" : "" }}>My</span>
                 <span className="">Portfolios</span>
@@ -147,10 +178,10 @@ const Portfolio = () => {
                                             <div className="image-wrapper">
                                                 {/* Show spinner while image is loading */}
                                                 {!loadingStates[`${item.id}-${id}`] && (
-                                                <div className="spinner-container">
-                                                    <div className="custom-spinner"></div>
-                                                </div>
-                                            )}
+                                                    <div className="spinner-container">
+                                                        <div className="custom-spinner"></div>
+                                                    </div>
+                                                )}
                                                 <img
                                                     src={image}
                                                     alt={`${item.project_name} Image ${id + 1}`}
@@ -166,21 +197,21 @@ const Portfolio = () => {
                                 </Swiper>
                             ) : (
                                 <div className="image-wrapper">
-                                {!loadingStates[`${item.id}-0`] && (
-                                    <div className="spinner-container">
-                                        <div className="custom-spinner"></div>
-                                    </div>
-                                )}
-                                <img
-                                    src={item.image[0]}
-                                    alt={item.project_name}
-                                    style={{
-                                        cursor: "pointer",
-                                        display: loadingStates[`${item.id}-0`] ? "block" : "none",
-                                    }}
-                                    onLoad={() => handleImageLoad(`${item.id}-0`)}
-                                />
-                            </div>
+                                    {!loadingStates[`${item.id}-0`] && (
+                                        <div className="spinner-container">
+                                            <div className="custom-spinner"></div>
+                                        </div>
+                                    )}
+                                    <img
+                                        src={item.image[0]}
+                                        alt={item.project_name}
+                                        style={{
+                                            cursor: "pointer",
+                                            display: loadingStates[`${item.id}-0`] ? "block" : "none",
+                                        }}
+                                        onLoad={() => handleImageLoad(`${item.id}-0`)}
+                                    />
+                                </div>
                             )}
                         </div>
 

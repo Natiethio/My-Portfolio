@@ -316,7 +316,7 @@
   },
 
   {
-    "id": 13,
+    "id": 14,
     "project_name": "Graphic Design",
     "image": ["/Images/Portfolio/design8d.png"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
@@ -335,7 +335,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 15,
     "project_name": "Graphic Design",
     "image": ["/Images/Portfolio/Sunsilk_shampoo2.jpg"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
@@ -354,7 +354,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 16,
     "project_name": "Graphic Design",
     "image": ["/Images/Portfolio/betenfollowus3.png"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
@@ -373,7 +373,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 17,
     "project_name": "Graphic Design",
     "image": ["/Images/Portfolio/balemuyaye1upd.png"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
@@ -392,7 +392,7 @@
     ]
   },
   {
-    "id": 17,
+    "id": 18,
     "project_name": "Graphic Design",
     "image": ["/Images/Portfolio/PLPAM.png"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
@@ -411,7 +411,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "project_name": "Graphic Design",
     "image": ["/Images/Portfolio/mirinda.png"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
@@ -430,7 +430,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "project_name": "Graphic Design",
     "image": ["/Images/Portfolio/BurgerHouseCanva.png"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
@@ -449,28 +449,9 @@
     ]
   },
   {
-    "id": 20,
-    "project_name": "Graphic Design",
-    "image": ["/Images/Portfolio/draft5.png"],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
-    "github_link": "",
-    "demo_link": "",
-    "type": "Graphics",
-    "frameworks": [
-      {
-        "name": "Adobe Photoshop",
-        "icon": "/Images/Services/PhotoShopicon.png"
-      },
-      {
-        "name": "Canva",
-        "icon": "/Images/Services/canvaicon.png"
-      }
-    ]
-  },
-  {
     "id": 21,
     "project_name": "Graphic Design",
-    "image": ["/Images/Portfolio/Brosher_Design.jpg"],
+    "image": ["/Images/Portfolio/draft5.png"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
     "github_link": "",
     "demo_link": "",
@@ -489,7 +470,7 @@
   {
     "id": 22,
     "project_name": "Graphic Design",
-    "image": ["/Images/Portfolio/mahi_baltena.png"],
+    "image": ["/Images/Portfolio/Brosher_Design.jpg"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
     "github_link": "",
     "demo_link": "",
@@ -508,7 +489,7 @@
   {
     "id": 23,
     "project_name": "Graphic Design",
-    "image": ["/Images/Portfolio/kursbet2.jpg"],
+    "image": ["/Images/Portfolio/mahi_baltena.png"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
     "github_link": "",
     "demo_link": "",
@@ -527,7 +508,7 @@
   {
     "id": 24,
     "project_name": "Graphic Design",
-    "image": ["/Images/Portfolio/sunscription4.png"],
+    "image": ["/Images/Portfolio/kursbet2.jpg"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
     "github_link": "",
     "demo_link": "",
@@ -546,7 +527,7 @@
   {
     "id": 25,
     "project_name": "Graphic Design",
-    "image": ["/Images/Portfolio/bannerjuice2.jpg"],
+    "image": ["/Images/Portfolio/sunscription4.png"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
     "github_link": "",
     "demo_link": "",
@@ -565,7 +546,7 @@
   {
     "id": 26,
     "project_name": "Graphic Design",
-    "image": ["/Images/Portfolio/draft5.png"],
+    "image": ["/Images/Portfolio/bannerjuice2.jpg"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
     "github_link": "",
     "demo_link": "",
@@ -581,6 +562,7 @@
       }
     ]
   },
+
   {
     "id": 27,
     "project_name": "Graphic Design",
