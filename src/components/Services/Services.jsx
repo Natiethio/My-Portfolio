@@ -16,6 +16,7 @@ import Illustrator from "/Images/Services/illustratoricon.png"
 import PhotoShop from "/Images/Services/PhotoShopicon.png"
 import Canva from "/Images/Services/canvaicon.png"
 import InDesign from "/Images/Services/indesignicon.png"
+import { memo } from "react";
 const Services = () => {
   // context
   const theme = useContext(themeContext);
@@ -95,12 +96,16 @@ const Services = () => {
       </div>
 
       <div className="swiper-container">
+      {
+                console.log(servicesData)
+              }
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={50}
           slidesPerView={1}
           autoplay={{ delay: 3000 }}
-          loop={true}
+          loop={true} // Keep looping enabled
+          loopedSlides={4} // Match this to your actual data length
           pagination={{
             el: ".custom-pagination",
             clickable: true,
@@ -108,7 +113,9 @@ const Services = () => {
           speed={1500}
         >
           {servicesData.map((service) => (
+
             <SwiperSlide key={service.id}>
+
               <motion.div
                 // initial={{ left: leftValue }}
                 // whileInView={{ left: leftValue2 }}

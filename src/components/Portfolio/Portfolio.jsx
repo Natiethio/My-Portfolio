@@ -9,6 +9,7 @@ import Popup from 'reactjs-popup';
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Spinner } from "react-bootstrap";
 import { Autoplay, FreeMode, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -25,6 +26,7 @@ const Portfolio = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [graphicsImages, setGraphicsImages] = useState(portfolioData)
+    const [loadingStates, setLoadingStates] = useState({});
 
     const animationVariants = {
         hidden: { scale: 0.9, opacity: 0 },
@@ -59,6 +61,24 @@ const Portfolio = () => {
         setIsOpen(true);
     };
 
+    // Reset loading states when data changes
+    useEffect(() => {
+        const initialLoadingStates = {};
+        filteredData.forEach((item) => {
+            item.image.forEach((_, idx) => {
+                initialLoadingStates[`${item.id}-${idx}`] = false; // Initialize all images as "not loaded"
+            });
+        });
+        setLoadingStates(initialLoadingStates);
+    }, [filteredData]);
+
+    const handleImageLoad = (id) => {
+        setLoadingStates((prev) => ({
+            ...prev,
+            [id]: true, // Update the state for the specific image
+        }));
+    };
+
 
     return (
         <motion.div
@@ -75,7 +95,7 @@ const Portfolio = () => {
                 <span className="">Portfolios</span>
             </div>
             <section className="portfolio-filter-buttons">
-                {["All", "Web App", "Graphics", "DeskTop App", "AI Project"].map((category) => (
+                {["All", "Web App", "Graphics", "Logo", "DeskTop App", "AI Project"].map((category) => (
                     <button
                         key={category}
                         className={`filter-button ${selectedCategory === category ? "active" : ""}`}
@@ -119,20 +139,48 @@ const Portfolio = () => {
                                 >
                                     {item.image.map((image, id) => (
                                         <SwiperSlide key={item.id}>
-                                            <img
+                                            {/* <img
                                                 src={image}
                                                 alt={`${item.project_name} Image ${id + 1}`}
                                                 style={{ cursor: "pointer" }}
-                                            />
+                                            /> */}
+                                            <div className="image-wrapper">
+                                                {/* Show spinner while image is loading */}
+                                                {!loadingStates[`${item.id}-${id}`] && (
+                                                <div className="spinner-container">
+                                                    <div className="custom-spinner"></div>
+                                                </div>
+                                            )}
+                                                <img
+                                                    src={image}
+                                                    alt={`${item.project_name} Image ${id + 1}`}
+                                                    style={{
+                                                        cursor: "pointer",
+                                                        display: loadingStates[`${item.id}-${id}`] ? "block" : "none",
+                                                    }}
+                                                    onLoad={() => handleImageLoad(`${item.id}-${id}`)}
+                                                />
+                                            </div>
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
                             ) : (
+                                <div className="image-wrapper">
+                                {!loadingStates[`${item.id}-0`] && (
+                                    <div className="spinner-container">
+                                        <div className="custom-spinner"></div>
+                                    </div>
+                                )}
                                 <img
                                     src={item.image[0]}
                                     alt={item.project_name}
-                                    style={{ cursor: "pointer" }}
+                                    style={{
+                                        cursor: "pointer",
+                                        display: loadingStates[`${item.id}-0`] ? "block" : "none",
+                                    }}
+                                    onLoad={() => handleImageLoad(`${item.id}-0`)}
                                 />
+                            </div>
                             )}
                         </div>
 
@@ -168,7 +216,7 @@ const Portfolio = () => {
                             {item.type === "Graphics" ? (
                                 <a
                                     href={item.image[0]}
-                                    target="_blank" 
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="button demo-button"
                                 >
