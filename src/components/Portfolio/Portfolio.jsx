@@ -244,7 +244,7 @@ const Portfolio = () => {
                                     View
                                 </a>
                             )}
-                            {item.type === "Graphics" ? (
+                            {item.type === "Graphics" || "Logo" ? (
                                 <a
                                     href={item.image[0]}
                                     target="_blank"
