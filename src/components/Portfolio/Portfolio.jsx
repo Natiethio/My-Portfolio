@@ -68,7 +68,7 @@ const Portfolio = () => {
 
     //     const handleOnline = () => {
     //         setIsOffline(false);
-           
+
     //     };
 
     //     const handleOffline = () => setIsOffline(true);
@@ -244,7 +244,7 @@ const Portfolio = () => {
                                     View
                                 </a>
                             )}
-                            {item.type === "Graphics" || "Logo" ? (
+                            {item.type === "Graphics" ? (
                                 <a
                                     href={item.image[0]}
                                     target="_blank"
@@ -265,6 +265,20 @@ const Portfolio = () => {
                                     </a>
                                 )
                             )}
+                            {item.type === "Logo" ? (
+                                <a
+                                    href={item.image[0]}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="button demo-button"
+                                >
+                                    View
+                                </a>
+                            ) : (
+                             <>
+                             </>
+                            )}
+
                             {/* {item.demo_link && (
                                 <a
                                     href={item.demo_link}
@@ -275,6 +289,7 @@ const Portfolio = () => {
                                     Demo
                                 </a>
                             )} */}
+
                         </div>
                     </motion.div>
                 ))}
