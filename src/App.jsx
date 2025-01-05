@@ -72,7 +72,7 @@ function App() {
         setOfflineToastVisible(false); // Reset visibility state
       }
 
-      toast.success("You're back online!", {
+      toast.success("You're back online! Reloading the page...", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -80,7 +80,12 @@ function App() {
         pauseOnHover: true,
         draggable: true,
         style: { backgroundColor: "green", color: "#fff" },
+        onClose: () => {
+          window.location.reload(); 
+        },
       });
+
+      
 
       setIsOffline(false);
     };
