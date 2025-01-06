@@ -159,7 +159,7 @@ const Portfolio = () => {
                                     modules={[Autoplay, Pagination]}
                                     spaceBetween={50}
                                     slidesPerView={1}
-                                    autoplay={{ delay: 3000 }}
+                                    autoplay={{ delay: 2500 }}
                                     loop={true}
                                     pagination={{
                                         el: ".custom-pagination",
