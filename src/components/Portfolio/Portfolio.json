@@ -103,6 +103,10 @@
         "icon": "/Images/Services/NextIcon.png"
       },
       {
+        "name": "TypeScript",
+        "icon": "/Images/Services/TypeScriptIcon.png"
+      },
+      {
         "name": "TailwindCss",
         "icon": "/Images/Services/TailwindCssicon.png"
       },
