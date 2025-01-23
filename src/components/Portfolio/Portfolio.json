@@ -80,6 +80,44 @@
   },
   {
     "id": 4,
+    "project_name": "Electro Gebeya",
+    "image": [
+      "/Images/Portfolio/Next_HomepageNL.jpeg",
+      "/Images/Portfolio/Next_HomepageLI.jpeg",
+      "/Images/Portfolio/New_Product_Grid.jpeg",
+      "/Images/Portfolio/next_cartPage.jpeg",
+      "/Images/Portfolio/Next_Product_Description.jpeg",
+      "/Images/Portfolio/Next_Registeration.jpeg",
+      "/Images/Portfolio/Next_Login.jpeg",
+      "/Images/Portfolio/Next_All_product.jpeg",
+      "/Images/Portfolio/Next_Add_Product.jpeg",
+      "/Images/Portfolio/Next_Update_product.jpeg"
+    ],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+    "github_link": "https://github.com/orgs/NextjsE-Commerce/repositories",
+    "demo_link": "",
+    "type": "Web App",
+    "frameworks": [
+      {
+        "name": "Next.js",
+        "icon": "/Images/Services/NextIcon.png"
+      },
+      {
+        "name": "TailwindCss",
+        "icon": "/Images/Services/TailwindCssicon.png"
+      },
+      {
+        "name": "Redux",
+        "icon": "/Images/Services/ReduxIcon.png"
+      },
+      {
+        "name": "Laravel",
+        "icon": "/Images/Services/Laravelicon.png"
+      }
+    ]
+  },
+  {
+    "id": 5,
     "project_name": "AI Based Traffic Violation Detection Alerting and Reporting System",
     "image": [
       "/Images/Portfolio/Aione.jpeg"
@@ -116,7 +154,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "project_name": "Book Store Management System",
     "image": [
       "/Images/Portfolio/BookStore1.png"
@@ -137,7 +175,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "project_name": "MERN Stack Mini Vehicle Management With Cloudinary",
     "image": [
       "/Images/Portfolio/Mini_Vehicle.jpeg"
@@ -170,7 +208,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "project_name": "Examination Management System",
     "image": [
       "/Images/Portfolio/Examadmin.png",
@@ -190,7 +228,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "project_name": "Logo Design",
     "image": [
       "/Images/Portfolio/Dream_ConstructionA.png",
@@ -214,7 +252,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "project_name": "Logo Design",
     "image": [
       "/Images/Portfolio/logo_M-1.png"
@@ -235,7 +273,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/Balemuyaye.png"
@@ -256,7 +294,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 12,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/Coffee.png"
@@ -277,7 +315,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/digital_markating2.png"
@@ -298,7 +336,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 14,
     "project_name": "Logo Design",
     "image": [
       "/Images/Portfolio/Logo_Fast_Food_Text_opt2.png",
@@ -323,7 +361,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 15,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/design8d.png"
@@ -344,7 +382,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 16,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/Sunsilk_shampoo2.jpg"
@@ -365,7 +403,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 17,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/betenfollowus3.png"
@@ -386,7 +424,7 @@
     ]
   },
   {
-    "id": 17,
+    "id": 18,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/balemuyaye1upd.png"
@@ -407,7 +445,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/PLPAM.png"
@@ -428,7 +466,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/mirinda.png"
@@ -449,7 +487,7 @@
     ]
   },
   {
-    "id": 20,
+    "id": 21,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/BurgerHouseCanva.png"
@@ -470,7 +508,7 @@
     ]
   },
   {
-    "id": 21,
+    "id": 22,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/draft5.png"
@@ -491,7 +529,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": 23,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/Brosher_Design.jpg"
@@ -512,7 +550,7 @@
     ]
   },
   {
-    "id": 23,
+    "id": 24,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/mahi_baltena.png"
@@ -533,7 +571,7 @@
     ]
   },
   {
-    "id": 24,
+    "id": 25,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/sunscription4.png"
@@ -554,7 +592,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": 26,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/bannerjuice2.jpg"
@@ -575,7 +613,7 @@
     ]
   },
   {
-    "id": 26,
+    "id": 27,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/BestGig2016.png"
@@ -596,10 +634,52 @@
     ]
   },
   {
-    "id": 27,
+    "id": 28,
     "project_name": "Graphic Design",
     "image": [
       "/Images/Portfolio/design4.png"
+    ],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+    "github_link": "",
+    "demo_link": "",
+    "type": "Graphics",
+    "frameworks": [
+      {
+        "name": "Adobe Photoshop",
+        "icon": "/Images/Services/PhotoShopicon.png"
+      },
+      {
+        "name": "Canva",
+        "icon": "/Images/Services/canvaicon.png"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "project_name": "Graphic Design",
+    "image": [
+      "/Images/Portfolio/design2.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
+    "github_link": "",
+    "demo_link": "",
+    "type": "Graphics",
+    "frameworks": [
+      {
+        "name": "Adobe Photoshop",
+        "icon": "/Images/Services/PhotoShopicon.png"
+      },
+      {
+        "name": "Canva",
+        "icon": "/Images/Services/canvaicon.png"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "project_name": "Graphic Design",
+    "image": [
+      "/Images/Portfolio/Buyers3upd.png"
     ],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, purus vel dictum tincidunt, elit felis gravida purus, non malesuada nulla quam a lectus. Vivamus euismod volutpat sem sed congue dolor sit amet, consectetur adipiscing elit.",
     "github_link": "",
