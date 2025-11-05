@@ -107,7 +107,7 @@ const Contact = () => {
           <textarea
             name="message"
             className="user"
-            placeholder="Message"
+            placeholder="Type your message here..."
             required
           />
           <button type="submit" className="button">
