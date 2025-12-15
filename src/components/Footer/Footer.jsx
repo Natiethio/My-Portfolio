@@ -27,7 +27,7 @@ const Footer2 = () => {
                     <a className="Link" href="https://www.linkedin.com/in/natnael-berhanu-272533254" target="_blank" rel="noopener noreferrer">
                         <Linkedin size="30"  />
                     </a>
-                    <a className="Link" href="https://t.me/nat_man_o" target="_blank" rel="noopener noreferrer">
+                    <a className="Link" href="https://t.me/NatnaelBerhanuMuluneh" target="_blank" rel="noopener noreferrer">
                         <Telegram size="30" />
                     </a>
                 </div>
