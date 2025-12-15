@@ -73,7 +73,7 @@ const Intro = () => {
                         <img src={LinkedIn} alt="LinkedIn" />
                     </a>
                     <a
-                        href="https://t.me/nat_man_o"
+                        href="https://t.me/NatnaelBerhanuMuluneh"
                         target="_blank"
                         rel="noopener noreferrer">
                         <img src={Telegram} width={110} height={110} alt="Telegram" />
