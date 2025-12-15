@@ -22,6 +22,7 @@
     "frameworks": [
       {
         "name": "Laravel",
+        
         "icon": "/Images/Services/Laravelicon.png"
       },
       {
