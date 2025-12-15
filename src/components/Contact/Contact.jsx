@@ -20,14 +20,31 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .sendForm(
-        "service_s979g69",
-        "template_xahly7k",
-        form.current,
-        "gGNtxBIq4b9x6FlxZ"
-      )
-      .then(
+    if (
+      !import.meta.env.VITE_EMAILJS_SERVICE_ID ||
+      !import.meta.env.VITE_EMAILJS_TEMPLATE_ID ||
+      !import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    ) {
+      toast.error("Email service is not configured properly.");
+      setLoading(false);
+      return;
+    }
+    
+       // emailjs
+    //   .sendForm(
+    //     "service_s979g69",
+    //     "template_xahly7k",
+    //     form.current,
+    //     "gGNtxBIq4b9x6FlxZ"
+    //   )
+
+    
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    ).then(
         (result) => {
           console.log(result.text);
           toast.success("Thank you! I'll get back to you as soon as possible.", {
