@@ -30,6 +30,8 @@ const Footer2 = () => {
                     <a className="Link" href="https://t.me/NatnaelBerhanuMuluneh" target="_blank" rel="noopener noreferrer">
                         <Telegram size="30" />
                     </a>
+
+                    
                 </div>
             </div>
             <hr className="footer-divider" />
