@@ -56,14 +56,11 @@
   
 .portfolio-filter-buttons {
     display: grid;
-    gap: 1rem; 
-    justify-content: center; 
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     align-items: center;
-    grid-template-columns: repeat(6, 0.15fr); 
+    width: 100%;
     margin-bottom: 2rem;
-    padding-left: 30px;
-    max-width: 1000px;
-    
 }
 
   .filter-button {
@@ -75,7 +72,7 @@
     cursor: pointer;
     background-color: #5eb939;
     color: white;
-    max-width: 180px;
+    width: 100%;
     transition: all 0.3s ease-in-out;
   }
   

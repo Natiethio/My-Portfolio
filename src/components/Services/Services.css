@@ -58,26 +58,24 @@
 }
 
 .mySwiper .swiper-pagination {
-  position: relative;
-  bottom: 10px;
-  top:0;
-  padding: -10px;
-  margin: 10px;
+  position: static;           /* sit under the cards */
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;    /* center align on desktop */
+  gap: 10px;
 }
-
 
 .mySwiper .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #e2e2e2; 
+  background-color: #b5b5b5;
   opacity: 1;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
 .mySwiper .swiper-pagination-bullet-active {
-  background-color: #452fc2; 
-  z-index:auto;
+  background-color: #5eb939;
+  transform: scale(1.05);
 }
 
 
@@ -177,26 +175,6 @@
   margin-bottom: 0.1rem;
 }
 
-.custom-pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  margin-left: -20px;
-}
-
-.custom-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  background: #aaa;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.custom-pagination .swiper-pagination-bullet-active {
-  background: #5eb939;
-}
-
 @media screen and (max-width: 1024px) {
   .services {
     /* margin-top: -100px; */
@@ -238,20 +216,15 @@
   .swiper-container {
     width: 100%;
   }
-
-  .custom-pagination {
-    display: flex;
-    justify-content: left;
-    margin-top: 1rem;
-    margin-left: 55px;
+  .mySwiper .swiper-pagination {
+    justify-content: center;
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 480px) {
-  .custom-pagination {
-    display: flex;
-    justify-content: left;
-    margin-top: 1rem;
-    margin-left: 82px;
+  .mySwiper .swiper-pagination {
+    justify-content: center;
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 380px) {
