@@ -1,22 +1,50 @@
 [
-    {
-      "date": "July 2023 - Nov 2023",
-      "companyName": "Kuraz Technologies",
-      "role": "Web Development Intern",
-      "description": "During my internship at Kuraz Technologies, I gained valuable knowledge in JavaScript and PHP frameworks. I also acquired experience working with APIs and full stack development.",
-      "image": "/Images/kurazslogo.png",
+       {
+      "date": "March 2025 - now",
+      "companyName": "Bank of Abyssinia",
+      "role": "Product development and IT Trainee",
+      "description": "This experianse shapes my IT and programming skills for banks QA automation Tests and UI/UX development and Test",
+      "image": "/Images/Asset 1@4x.png",
       "skills": [
         {
-          "name": "Laravel",
-          "icon": "/Images/Services/Laravelicon.png"
+          "name": "Canva",
+          "icon": "/Images/Services/canvaicon.png"
+        },
+        {
+          "name": "Figma",
+          "icon": "/Images/Services/figmaicon.png"
+        },
+        {
+          "name": "Adobe Photoshop",
+          "icon": "/Images/Services/PhotoShopicon.png"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "/Images/Services/illustratoricon.png"
+        },
+        {
+          "name": "React.js",
+          "icon": "/Images/Services/Reacticon.png"
         },
         {
           "name": "TailwindCss",
           "icon": "/Images/Services/TailwindCssicon.png"
+        },
+                {
+          "name": "Flask",
+          "icon": "/Images/Services/TailwindCssicon.png"
+        },
+        {
+          "name": "Django",
+          "icon": "/Images/Services/django-basics.png"
+        },
+        {
+          "name": "UAT and QA Tests",
+          "icon": "/Images/Services/qa.jpg"
         }
       ]
     },
-    {
+     {
       "date": "Sep 2024 - Nov 2024",
       "companyName": "Beten Ethiopia",
       "role": "IT Officer Intern",
@@ -34,6 +62,23 @@
         {
           "name": "React.js",
           "icon": "/Images/Services/Reacticon.png"
+        },
+        {
+          "name": "TailwindCss",
+          "icon": "/Images/Services/TailwindCssicon.png"
+        }
+      ]
+    },
+  {
+      "date": "July 2023 - Nov 2023",
+      "companyName": "Kuraz Technologies",
+      "role": "Web Development Intern",
+      "description": "During my internship at Kuraz Technologies, I gained valuable knowledge in JavaScript and PHP frameworks. I also acquired experience working with APIs and full stack development.",
+      "image": "/Images/kurazslogo.png",
+      "skills": [
+        {
+          "name": "Laravel",
+          "icon": "/Images/Services/Laravelicon.png"
         },
         {
           "name": "TailwindCss",
